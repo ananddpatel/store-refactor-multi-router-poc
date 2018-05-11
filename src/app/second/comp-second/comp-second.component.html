@@ -11,6 +11,15 @@
       <button (click)="increment()">Increment</button>
       <button (click)="decrement()">Decrement</button>
       <button (click)="reset()">Reset Counter</button>
+
+      <div class="posts">
+        <div class="post" *ngFor="let p of posts$ | async">
+          <h3>{{p.id}}. {{p.title}}</h3>
+          <pre>{{p.body}}</pre>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </div>

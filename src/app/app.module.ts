@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routes';
 import { counterReducer } from './first/redux/reducers/counter.reducer';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './first/redux/reducers/first.index';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { reducers, metaReducers } from './first/redux/reducers/first.index';
     FirstModule,
     SecondModule,
     AppRoutingModule,
+    EffectsModule.forRoot([]),
     StoreModule.forRoot({}, { metaReducers }),
     StoreDevtoolsModule.instrument({ maxAge: 5 })
   ],

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import * as ca from '../../first/redux/actions/counter.actions';
+import * as pa from '../redux/actions/post.actions';
 import { getNum } from '../../first/redux/reducers/first.index';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
+import { getPosts } from '../redux/reducers/second.index';
 
 @Component({
   selector: 'app-comp-second',
@@ -11,12 +13,16 @@ import { Observable } from 'rxjs/Observable';
 })
 export class CompSecondComponent implements OnInit {
   count$: Observable<number>;
+  posts$: Observable<any[]>;
 
   constructor(private store: Store<any>) {
     this.count$ = store.select(getNum);
+    this.posts$ = store.select(getPosts);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.store.dispatch(new pa.LoadPosts());
+  }
 
   increment() {
     this.store.dispatch(new ca.Increment(1));

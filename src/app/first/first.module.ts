@@ -8,14 +8,18 @@ import { FirstChildComponent } from './first-child/first-child.component';
 import { SecondChildComponent } from './second-child/second-child.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './redux/reducers/first.index';
+import { JsonplaceholderService } from './services/jsonplaceholder.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     FirstRoutingModule,
     SharedModule,
     StoreModule.forFeature('counter', reducers)
   ],
-  declarations: [CompFirstComponent, FirstChildComponent, SecondChildComponent]
+  declarations: [CompFirstComponent, FirstChildComponent, SecondChildComponent],
+  providers: [JsonplaceholderService]
 })
 export class FirstModule {}

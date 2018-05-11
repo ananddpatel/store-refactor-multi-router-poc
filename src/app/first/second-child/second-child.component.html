@@ -1,1 +1,8 @@
 <h1 class="text-center">FIRST-COMP > SECOND CHILD PAGE</h1>
+<button (click)="loadPosts()">Load Posts</button>
+<div class="posts">
+  <div class="post" *ngFor="let p of posts$ | async">
+    <h3>{{p.id}}. {{p.title}}</h3>
+    <pre>{{p.body}}</pre>
+  </div>
+</div>
