@@ -10,6 +10,10 @@
       <input type="text" class="btn btn-primary" value="1st > 2nd child" [routerLink]="['/first-comp/second-child']">
       <input type="text" class="btn btn-primary" value="2nd" routerLink="/second-comp">
       <router-outlet></router-outlet>
+      <div>Current Count: {{ count$ | async }}</div>
+      <button (click)="increment()">Increment</button>
+      <button (click)="decrement()">Decrement</button>
+      <button (click)="reset()">Reset Counter</button>
     </div>
   </div>
 </div>

@@ -6,9 +6,16 @@ import { CompFirstComponent } from './comp-first/comp-first.component';
 import { SharedModule } from '../shared/shared.module';
 import { FirstChildComponent } from './first-child/first-child.component';
 import { SecondChildComponent } from './second-child/second-child.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './redux/reducers/first.index';
 
 @NgModule({
-  imports: [CommonModule, FirstRoutingModule, SharedModule],
+  imports: [
+    CommonModule,
+    FirstRoutingModule,
+    SharedModule,
+    StoreModule.forFeature('counter', reducers)
+  ],
   declarations: [CompFirstComponent, FirstChildComponent, SecondChildComponent]
 })
 export class FirstModule {}

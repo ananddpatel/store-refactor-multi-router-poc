@@ -5,3 +5,9 @@
 </div> -->
 
 <h1 class="text-center">First Comp > First-child</h1>
+
+
+<div>Current Count: {{ count$ | async }}</div>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<button (click)="reset()">Reset Counter</button>

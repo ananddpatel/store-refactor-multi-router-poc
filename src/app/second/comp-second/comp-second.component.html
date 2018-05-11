@@ -6,6 +6,11 @@
     </div>
     <div class="col-11">
       <h1 class="text-center">Second Page</h1>
+
+      <div>Current Count: {{ count$ | async }}</div>
+      <button (click)="increment()">Increment</button>
+      <button (click)="decrement()">Decrement</button>
+      <button (click)="reset()">Reset Counter</button>
     </div>
   </div>
 </div>
