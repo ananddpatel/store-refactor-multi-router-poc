@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-1 sidebar">
+      <app-sidenav></app-sidenav>
+    </div>
+    <div class="col-11">
+      <!-- <input type="text" class="btn btn-primary" value="home" [routerLink]="['/']"> -->
+      <input type="text" class="btn btn-primary" value="firstChild (firstchild component)" [routerLink]="['/first-comp']">
+      <input type="text" class="btn btn-primary" value="firstSecondChild" [routerLink]="['/first-comp/second-child']">
+      <input type="text" class="btn btn-primary" value="second page" routerLink="/second">
+      <!-- <input type="text" class="btn btn-primary" value="secondChild" [routerLink]="['/child', { outlets: { 'firstoutlet': ['first-child'] } }]">
+      <input type="text" class="btn btn-primary" value="secondChild" [routerLink]="['/child', { outlets: { 'firstoutlet': ['second-child'] } }]"> -->
+      <!-- <router-outlet name="firstoutlet"></router-outlet> -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
