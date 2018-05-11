@@ -27,7 +27,8 @@
     "@ngrx/effects": "4.0.3",
     "@ngrx/entity": "^5.2.0",
     "@ngrx/store": "4.0.3",
-    "@ngrx/store-devtools": "4.0.0"
+    "@ngrx/store-devtools": "4.0.0",
+    "ngrx-store-freeze": "0.1.9"
   },
   "devDependencies": {
     "@angular/cli": "~1.7.4",
