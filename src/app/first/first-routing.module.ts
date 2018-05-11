@@ -6,15 +6,15 @@ import { SecondChildComponent } from './second-child/second-child.component';
 
 const routes: Routes = [
   {
-    path: 'first-comp',
+    path: '',
     component: CompFirstComponent,
     children: [
       {
-        path: '',
+        path: 'first-comp/first-child',
         component: FirstChildComponent
       },
       {
-        path: 'second-child',
+        path: 'first-comp/second-child',
         component: SecondChildComponent
       }
     ]
