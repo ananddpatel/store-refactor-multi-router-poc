@@ -14,7 +14,6 @@ export class FirstChildComponent implements OnInit {
 
   constructor(private store: Store<any>) {
     this.count$ = store.select(getNum);
-    this.count$ = store.select(getNum);
   }
 
   ngOnInit() {}

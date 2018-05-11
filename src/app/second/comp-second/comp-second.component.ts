@@ -4,11 +4,6 @@ import { getNum } from '../../first/redux/reducers/first.index';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
-export class Increment2nd {
-  readonly type = 'INCREMENT';
-  constructor(public by: number = 1) {}
-}
-
 @Component({
   selector: 'app-comp-second',
   templateUrl: './comp-second.component.html',
@@ -19,13 +14,12 @@ export class CompSecondComponent implements OnInit {
 
   constructor(private store: Store<any>) {
     this.count$ = store.select(getNum);
-    this.count$ = store.select(getNum);
   }
 
   ngOnInit() {}
 
   increment() {
-    this.store.dispatch(new Increment2nd(2));
+    this.store.dispatch(new ca.Increment(1));
   }
 
   decrement() {
