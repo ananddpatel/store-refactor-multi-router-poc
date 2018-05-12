@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as ca from '../../first/redux/actions/counter.actions';
-import * as pa from '../redux/actions/post.actions';
+import * as ca from '@a-actions/counter.actions';
+import * as pa from '@a-actions/post.actions';
 import { getNum } from '../../first/redux/reducers/first.index';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';

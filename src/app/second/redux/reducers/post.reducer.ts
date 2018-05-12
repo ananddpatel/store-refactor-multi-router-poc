@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 import { createSelector } from '@ngrx/store';
-import * as pa from '../actions/post.actions';
+import * as pa from '@a-actions/post.actions';
 
 export interface State {
   posts: Array<any>;

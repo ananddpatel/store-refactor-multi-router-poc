@@ -1,4 +1,4 @@
-import * as ca from '../actions/counter.actions';
+import * as ca from '@a-actions/counter.actions';
 
 export interface State {
   name: string;

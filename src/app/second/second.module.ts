@@ -5,7 +5,7 @@ import { SecondRoutingModule } from './second-routing.module';
 import { CompSecondComponent } from './comp-second/comp-second.component';
 import { SharedModule } from '../shared/shared.module';
 import { EffectsModule } from '@ngrx/effects';
-import { PostEffects } from './redux/effects/post.effect';
+import { PostEffects } from '@a-effects/post.effect';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './redux/reducers/second.index';
 import { HttpClient, HttpClientModule } from '@angular/common/http';

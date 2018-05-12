@@ -7,8 +7,8 @@ import { Observable } from 'rxjs/Observable';
 import { Action } from '@ngrx/store';
 import { Actions, Effect, toPayload } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
-import * as pa from '../actions/post.actions';
-import { JsonplaceholderService } from '../../../first/services/jsonplaceholder.service';
+import * as pa from '@a-actions/post.actions';
+import { JsonplaceholderService } from '../../first/services/jsonplaceholder.service';
 
 @Injectable()
 export class PostEffects {
@@ -18,7 +18,6 @@ export class PostEffects {
     .map(toPayload)
     .mergeMap(payload => {
       return this.api.getPosts().map((data: any) => {
-        console.log(data);
         return new pa.LoadPostsSuccess(data);
       });
     });

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
-import * as ca from '../redux/actions/counter.actions';
+import * as ca from '@a-actions/counter.actions';
 import { getCounterStateSelector, getNum } from '../redux/reducers/first.index';
 
 @Component({
