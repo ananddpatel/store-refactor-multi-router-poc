@@ -8,9 +8,12 @@
       <input type="text" class="btn btn-primary" value="1st" [routerLink]="['/first-comp']">
       <input type="text" class="btn btn-primary" value="1st > 1st child" [routerLink]="['/first-comp/first-child']">
       <input type="text" class="btn btn-primary" value="1st > 2nd child" [routerLink]="['/first-comp/second-child']">
+      <input type="text" class="btn btn-primary" value="1st > 2nd comp" [routerLink]="['/first-comp/second-comp']">
       <input type="text" class="btn btn-primary" value="2nd" routerLink="/second-comp">
       <router-outlet></router-outlet>
-      <div>Current Count: {{ count$ | async }}</div>
+      <pre>comp-first.component.html</pre>
+      <div>
+        Current Count: {{ count$ | async }}</div>
       <button (click)="increment()">Increment</button>
       <button (click)="decrement()">Decrement</button>
       <button (click)="reset()">Reset Counter</button>
