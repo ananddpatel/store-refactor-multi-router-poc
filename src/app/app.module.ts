@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { FirstModule } from './first/first.module';
 import { SecondModule } from './second/second.module';
 import { AppRoutingModule } from './app-routes';
-import { counterReducer } from './first/redux/reducers/counter.reducer';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './first/redux/reducers/first.index';
 import { EffectsModule } from '@ngrx/effects';

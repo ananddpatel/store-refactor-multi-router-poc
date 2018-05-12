@@ -4,10 +4,9 @@ import {
   createFeatureSelector,
   createSelector
 } from '@ngrx/store';
-import * as counter from './counter.reducer';
+import * as counter from '@a-reducers/counter.reducer';
 import { environment } from '../../../../environments/environment';
 import { storeFreeze } from 'ngrx-store-freeze';
-import * as cr from './counter.reducer';
 
 export const metaReducers: MetaReducer<any>[] = !environment.production
   ? [storeFreeze]
@@ -27,4 +26,4 @@ export const getCounterState = createSelector(
   getCounterStateSelector,
   (state: State) => state.counter
 );
-export const getNum = createSelector(getCounterState, cr.getNum);
+export const getNum = createSelector(getCounterState, counter.getNum);

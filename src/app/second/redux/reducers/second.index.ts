@@ -1,4 +1,4 @@
-import * as posts from './post.reducer';
+import * as posts from '@a-reducers/post.reducer';
 import {
   ActionReducerMap,
   createFeatureSelector,
