@@ -12,7 +12,7 @@ export const initialState: State = {
   loading: false
 };
 
-export function reducer(
+export function postReducer(
   state: State = initialState,
   action: pa.Actions
 ): State {

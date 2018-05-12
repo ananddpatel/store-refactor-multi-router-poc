@@ -7,8 +7,8 @@ import { FirstModule } from './first/first.module';
 import { SecondModule } from './second/second.module';
 import { AppRoutingModule } from './app-routes';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './first/redux/reducers/first.index';
 import { EffectsModule } from '@ngrx/effects';
+import { metaReducers } from '@a-redux/all-reducers-maps';
 
 @NgModule({
   declarations: [AppComponent],

@@ -7,9 +7,9 @@ import { SharedModule } from '../shared/shared.module';
 import { EffectsModule } from '@ngrx/effects';
 import { PostEffects } from '@a-effects/post.effect';
 import { StoreModule } from '@ngrx/store';
-import { reducers } from './redux/reducers/second.index';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { JsonplaceholderService } from '../first/services/jsonplaceholder.service';
+import { postReducers } from '@a-redux/index';
 
 @NgModule({
   imports: [
@@ -17,7 +17,7 @@ import { JsonplaceholderService } from '../first/services/jsonplaceholder.servic
     SecondRoutingModule,
     SharedModule,
     HttpClientModule,
-    StoreModule.forFeature('posts', reducers),
+    StoreModule.forFeature('posts', postReducers),
     EffectsModule.forFeature([PostEffects])
   ],
   declarations: [CompSecondComponent],

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
-import { getPosts } from '../../second/redux/reducers/second.index';
+import { getPosts } from '@a-redux/selectors/post.selectors';
 
 @Component({
   selector: 'app-second-child',

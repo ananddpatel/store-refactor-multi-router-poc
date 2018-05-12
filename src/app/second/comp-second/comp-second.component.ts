@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import * as ca from '@a-actions/counter.actions';
 import * as pa from '@a-actions/post.actions';
-import { getNum } from '../../first/redux/reducers/first.index';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { getPosts } from '../redux/reducers/second.index';
+import { getNum } from '@a-redux/selectors/counter.selectors';
+import { getPosts } from '@a-redux/selectors/post.selectors';
 
 @Component({
   selector: 'app-comp-second',

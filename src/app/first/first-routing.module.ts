@@ -18,7 +18,8 @@ const routes: Routes = [
         component: SecondChildComponent
       }
     ]
-  }
+  },
+  { path: 'first-comp', pathMatch: 'full', redirectTo: '' }
 ];
 
 @NgModule({

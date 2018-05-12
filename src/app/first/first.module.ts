@@ -7,9 +7,9 @@ import { SharedModule } from '../shared/shared.module';
 import { FirstChildComponent } from './first-child/first-child.component';
 import { SecondChildComponent } from './second-child/second-child.component';
 import { StoreModule } from '@ngrx/store';
-import { reducers } from './redux/reducers/first.index';
 import { JsonplaceholderService } from './services/jsonplaceholder.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { counterReducers } from '@a-redux/index';
 
 @NgModule({
   imports: [
@@ -17,7 +17,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FirstRoutingModule,
     SharedModule,
-    StoreModule.forFeature('counter', reducers)
+    StoreModule.forFeature('counter', counterReducers)
   ],
   declarations: [CompFirstComponent, FirstChildComponent, SecondChildComponent],
   providers: [JsonplaceholderService]
