@@ -10,17 +10,20 @@ import { StoreModule } from '@ngrx/store';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { JsonplaceholderService } from '../first/services/jsonplaceholder.service';
 import { postReducers } from '@a-redux/index';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
-    SecondRoutingModule,
+    RouterModule,
+    /* SecondRoutingModule, */
     SharedModule,
     HttpClientModule,
     StoreModule.forFeature('posts', postReducers),
     EffectsModule.forFeature([PostEffects])
   ],
   declarations: [CompSecondComponent],
+  exports: [CompSecondComponent],
   providers: [JsonplaceholderService]
 })
 export class SecondModule {}

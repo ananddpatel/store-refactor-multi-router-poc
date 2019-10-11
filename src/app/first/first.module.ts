@@ -10,16 +10,18 @@ import { StoreModule } from '@ngrx/store';
 import { JsonplaceholderService } from './services/jsonplaceholder.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { counterReducers } from '@a-redux/index';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
-    FirstRoutingModule,
-    SharedModule,
+    RouterModule,
+    /* FirstRoutingModule, */ SharedModule,
     StoreModule.forFeature('counter', counterReducers)
   ],
   declarations: [CompFirstComponent, FirstChildComponent, SecondChildComponent],
+  exports: [CompFirstComponent, FirstChildComponent, SecondChildComponent],
   providers: [JsonplaceholderService]
 })
 export class FirstModule {}
